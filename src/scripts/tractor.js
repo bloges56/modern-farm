@@ -13,7 +13,9 @@ export const plantSeeds = (plan) => {
                 addPlant(createAsparagus());
             }
             if(j === "Corn"){
-                addPlant(createCorn());
+                var corns = createCorn();
+                addPlant(corns[0]);
+                addPlant(corns[1]);
             }
             if(j === "Potato"){
                 addPlant(createPotato());

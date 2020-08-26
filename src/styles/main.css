@@ -44,3 +44,15 @@ h1,h2,h3,h4,h5,h6 {
     border: dotted 1px;
 }
 
+.food-table {
+    border-collapse: collapse;
+}
+
+.food-table, th, td {
+    border: 1px dotted black;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
