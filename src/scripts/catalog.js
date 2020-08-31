@@ -15,22 +15,22 @@ export const Catalog = (food) => {
 
    
     
-    for(var plant of food){
-        for(var type of Object.keys(foodQuantity)){
+    food.map(plant => {
+        Object.keys(foodQuantity).map(type =>{
             if(type === plant.type){
                 foodQuantity[type] += 1;
             }
-        }
-    }
+        })
+    })
 
    
 
-    for(var plant of Object.keys(foodQuantity)){
+    Object.keys(foodQuantity).map(plant =>{
         contentElement.innerHTML += `
             <tr>
                 <td>${plant}</td>
                 <td>${foodQuantity[plant]}</td>
             </tr>
         `;
-    }
+    })
 };
