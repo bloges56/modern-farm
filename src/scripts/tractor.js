@@ -7,8 +7,8 @@ import { createWheat } from './seeds/wheat.js'
 import { addPlant } from './field.js'
 
 export const plantSeeds = (plan) => {
-    for(var i of plan){
-        for(var j of i){
+    plan.map(i => {
+        i.map(j =>{
             if(j === "Asparagus"){
                 addPlant(createAsparagus());
             }
@@ -29,6 +29,6 @@ export const plantSeeds = (plan) => {
             if(j === "Wheat"){
                 addPlant(createWheat());
             }
-        }
-    }
+        })
+    })
 };
