@@ -5,7 +5,7 @@ export const harvestPlants = (field) => {
     
     field[0].id = 1;
     
-    for(var plant of field){
+    field.map(plant =>{
 
         var amount = plant.output;
         if(plant.type === "Corn"){
@@ -26,7 +26,7 @@ export const harvestPlants = (field) => {
             }
             idIncrement+=1;
         }
-    }
+    })
     return harvestedPlants;
 
 };
